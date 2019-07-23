@@ -1,0 +1,9 @@
+body {
+    background: center no-repeat url('../img/john-rodenn-castillo-eluzJSfkNCk-unsplash.jpg');
+background-size: cover;
+/* background-position: center; */
+/* background-attachment: scroll; */
+  background-attachment: fixed;
+}
+
+

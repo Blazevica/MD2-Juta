@@ -1,0 +1,70 @@
+.box1 {
+    background: LightSkyBlue;
+    grid-area: header;
+  }
+
+  .box2 {
+    background: LightSalmon;
+    grid-area: advert;
+  }
+
+  .box3 {
+    background: PaleTurquoise;
+    grid-area: content;
+  }
+
+  .box4 {
+    background: lightpink;
+    grid-area: footer;
+  }
+
+  .sidebar {
+      background: brown;
+      grid-area: sidebar;
+
+  }
+
+  .container {
+    font-size: 1.5em;
+    min-height: 300px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 1fr auto;
+    grid-gap: 10px;
+    grid-template-areas:
+      "header"
+      "advert"
+      "content"
+      "sidebar"
+      "footer";
+  }
+
+  @media (min-width: 400px){
+    .container{
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 50px 1fr auto 50px;
+      grid-template-areas:
+        "header header"
+        "advert content"
+        "advert sidebar"
+        "footer footer";
+    }
+  }
+
+  @media (min-width: 960px){
+    .container{
+      /* change the code below this line */
+      grid-template-columns: 100px 3fr 1fr;
+      grid-template-rows: auto 1fr 1fr 50px;
+
+      grid-template-areas:
+        "header header header"
+        "advert content sidebar"
+        "advert content sidebar"
+        "footer footer  footer";
+
+    /* change the code above this line */
+    }
+  }
