@@ -1,6 +1,312 @@
-.container {
-font-size: 1.5em;
+html {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica;
+  background-color: rgb(224, 218, 220)
+
+}
+
+/* heder */
+
+.item1 img {
+  width: auto;
+  height: auto;
+  
+}
+.brand {
+  display:block;
+  width:30%;
+  height: auto;
+  
+ 
 }
 .item1 {
-  font-size: 100px;
+width: 100px;
+height:50px;
+  grid-area: brand;
+  padding: 5%;
 }
+
+.item2 {
+  height: 120px;
+  grid-area: global;
+  font-size: 1.3rem;
+}
+
+.header {
+  font-size: 70%;
+  min-height:auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: max-content;
+  grid-template-rows: auto auto;
+  grid-gap: 20px;
+  grid-template-areas:
+    "brand brand"
+    "global global";   
+    
+}
+
+/* navigation */
+.navi {
+  list-style: none;
+  font-weight: bold;
+  height: 120px;
+  
+}
+
+.navi li {
+  /* display: block; */
+  color: black; 
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  float:left;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+  text-align:center;
+  
+}
+
+
+/* here starts header media queries */
+@media (min-width: 576px){
+  .header{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr ;
+    grid-template-areas:
+      "brand global global";
+      grid-gap: 0px;
+  }
+  .item1 {
+      width: auto;
+      height:auto;
+  }
+  .item1 img {
+      width: 100%;
+      height: auto;
+      
+} }
+
+@media (min-width: 992px){
+  .header{
+    
+    grid-template-columns: 1fr 60% 2fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "brand global global"
+      
+  }
+  .item1 {
+      width: auto;
+      height:auto;
+  }
+  .item1 img {
+      width: 100%;
+      height: auto;
+      
+}
+ li.li1 {
+  float: left;
+   
+ }
+
+ .item2 {
+   display: flex;
+   justify-content: center;
+ }
+ .navi {
+   font-size: 30px;
+ }
+}
+  
+/* Here ends header container */
+
+/* Here starts a body */
+
+.item3 {
+
+  grid-area: hero;
+  max-height: 241px;
+  
+}
+
+
+.item4 {
+  text-align: left;
+  grid-area: article;
+  background-color: lightgray;
+  border-radius: 5px;
+  padding: 5%;
+  font-size: 1.3rem;
+}
+.item5 {
+  grid-area: ad;
+  border-radius: 5px;
+  
+  
+}
+
+.item6 {
+  
+  grid-area: article_li;
+  text-align: justify;
+  background-color: rgba(141, 136, 136, 0.575); 
+  border-radius: 5px;
+  
+}
+
+.item7 {
+  padding:30px;
+  grid-area: sidebar;
+  display:none;
+  background-color: lightgray;
+  border-radius: 5px;
+}
+
+.body {
+  font-size: 1.5em;
+  min-height: 700px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr ;
+  grid-template-rows: auto auto auto auto;
+  grid-gap: 20px;
+  grid-template-areas:
+    "hero"
+    "article"
+    "ad"
+    "article_li";
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+
+/* hero */ 
+.hero-image {
+background-image: url('../img/42.jpg');
+background-size: cover;
+background-repeat:no-repeat;
+background-position:center;
+position:relative;
+height:241px;
+border-radius: 6px;
+}
+.capture {
+font-size:2em;
+font-family: 'comic san', cursive;
+opacity: 0.5;
+white-space: nowrap;
+text-align: center;
+position: absolute;
+top: 20%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: white;
+display: none;
+}
+
+
+/* Main contain */
+.paragraph {
+margin: 50px;
+}
+.title {
+text-align: center;
+}
+
+
+/* AD reklama */
+.img-ad {
+width: 100%;
+border-radius: 5px;
+}
+
+/* artical */
+
+.art-li {
+margin: 15px 0;
+font-weight: bold;
+}
+
+/* Here starts footer */
+.item8 {
+  grid-area: footer;
+  text-align:center;
+  padding: 30px;
+}
+
+/* footer */
+
+.footer {
+  font-size: 1.5rem;
+  font-weight: bold;
+  min-height: 100px;
+  width: 100%;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-areas:
+ "footer"
+ 
+ ;
+}
+
+/* Starts body media queries */
+
+  @media (min-width: 576px)
+  {      
+      .item7 {
+          display: block;
+      }
+      .body{
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        grid-gap: 1em;
+        grid-template-areas: 
+          "hero hero"
+          "article ad"
+          "article_li article_li"
+          "sidebar sidebar ";
+      }
+      .capture {
+        font-size:2em;
+        display:block;
+      }
+     .img-ad {
+       max-height: auto;
+     }
+    }
+    
+    @media (min-width: 992px){
+      .item3 {
+          display:block;  
+          /*mobile version*/
+      }
+      .item7 {
+          display: block;
+      }
+      .body{
+        
+        
+        grid-gap: 1em;
+        grid-template-areas:
+        "hero hero hero ad"
+        "article article_li article_li sidebar"
+          
+      }
+      .capture {
+        font: size 0.3em;
+        display: block;
+      }
+      
+  }
+      /* End media */
+
+
+      
+    
+  

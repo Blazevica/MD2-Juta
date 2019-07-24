@@ -2,6 +2,7 @@ body {
     background: center no-repeat url('../img/john-rodenn-castillo-eluzJSfkNCk-unsplash.jpg');
 background-size: cover;
 background-attachment: fixed;
+/* background-image: linear-gradient (rgba(41, 38, 38, 0.5), rgba(37, 31, 31, 0.993)); */
 }
 
 
