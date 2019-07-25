@@ -233,7 +233,7 @@ margin: 15px 0;
 font-weight: bold;
 }
 
-/* Here starts footer */
+/* Starts footer */
 .item8 {
   grid-area: footer;
   text-align:center;
@@ -299,7 +299,7 @@ font-weight: bold;
           
       }
       .capture {
-        font: 0.3em;
+        font: 1 em;
         display: block;
       }
       
