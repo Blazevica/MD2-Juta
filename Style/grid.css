@@ -277,7 +277,7 @@ font-weight: bold;
         display:block;
       }
      .img-ad {
-       max-height: auto;
+       max-height: none;
      }
     }
     
@@ -299,7 +299,7 @@ font-weight: bold;
           
       }
       .capture {
-        font: size 0.3em;
+        font: 0.3em;
         display: block;
       }
       
